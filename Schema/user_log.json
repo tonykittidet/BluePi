@@ -1,0 +1,38 @@
+[
+ {
+   "description": "created_at",
+   "name": "created_at",
+   "type": "TIMESTAMP",
+   "mode": "NULLABLE"
+ },
+ {
+   "description": "updated_at",
+   "name": "updated_at",
+   "type": "TIMESTAMP",
+   "mode": "NULLABLE"
+ }, 
+ {
+   "description": "id",
+   "name": "id",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "user_id",
+   "name": "user_id",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "action",
+   "name": "action",
+   "type": "STRING",
+   "mode": "REQUIRED"
+ },
+ {
+   "description": "status",
+   "name": "status",
+   "type": "INT64",
+   "mode": "NULLABLE"
+ }
+]
