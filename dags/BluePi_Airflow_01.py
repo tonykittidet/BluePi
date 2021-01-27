@@ -58,44 +58,7 @@ load_user_log = GoogleCloudStorageToBigQueryOperator(
     bucket = gs_bucket,
     source_objects = [des_dir + '/user_log.json'],
     destination_project_dataset_table = f'{project_id}:{staging_dataset}.user_log',
-    schema_object = [
- {
-   "description": "created_at",
-   "name": "created_at",
-   "type": "TIMESTAMP",
-   "mode": "NULLABLE"
- },
- {
-   "description": "updated_at",
-   "name": "updated_at",
-   "type": "TIMESTAMP",
-   "mode": "NULLABLE"
- }, 
- {
-   "description": "id",
-   "name": "id",
-   "type": "STRING",
-   "mode": "REQUIRED"
- },
- {
-   "description": "user_id",
-   "name": "user_id",
-   "type": "STRING",
-   "mode": "REQUIRED"
- },
- {
-   "description": "action",
-   "name": "action",
-   "type": "STRING",
-   "mode": "REQUIRED"
- },
- {
-   "description": "status",
-   "name": "status",
-   "type": "INT64",
-   "mode": "NULLABLE"
- }
-],
+    schema_object = des_dir + '/Schema/user_log.json',
     write_disposition='WRITE_TRUNCATE',
     source_format = 'NEWLINE_DELIMITED_JSON'
 )
