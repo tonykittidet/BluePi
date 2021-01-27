@@ -26,9 +26,8 @@ des_dir = "BluePi"
 
 # Define dag
 dag = DAG('BluePi_Airflow_01',
-          start_date=datetime.now(),
+          start_date=datetime(2021, 1, 25),
           schedule_interval='@hourly',
-          concurrency=5,
           max_active_runs=1,
           default_args=default_args)
 
